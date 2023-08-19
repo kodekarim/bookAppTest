@@ -71,10 +71,4 @@ class ReadViewModel {
         page.lContentLabel.text = text
         return page
     }
-    
-    func preferredFontWithCustomSize(for textStyle: UIFont.TextStyle, customSize: CGFloat) -> UIFont {
-        let font = UIFont.preferredFont(forTextStyle: textStyle)
-        let fontDescriptor = font.fontDescriptor.withSize(customSize)
-        return UIFont(descriptor: fontDescriptor, size: customSize)
-    }
 }
