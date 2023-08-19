@@ -1,0 +1,37 @@
+{
+  "configurations" : [
+    {
+      "id" : "C3C19E2B-C9CB-45E3-9F93-ABB3ED689638",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:bookapp.xcodeproj",
+      "identifier" : "963C40762A8FD85400B5CB67",
+      "name" : "bookapp"
+    }
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:bookapp.xcodeproj",
+        "identifier" : "963C408C2A8FD85500B5CB67",
+        "name" : "bookappTests"
+      }
+    },
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:bookapp.xcodeproj",
+        "identifier" : "963C40962A8FD85500B5CB67",
+        "name" : "bookappUITests"
+      }
+    }
+  ],
+  "version" : 1
+}

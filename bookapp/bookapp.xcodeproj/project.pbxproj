@@ -81,6 +81,7 @@
 		963DEEBB2A90DEA400F4A2D1 /* UserSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
 		963DEEBD2A90E4C200F4A2D1 /* UILableExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILableExtension.swift; sourceTree = "<group>"; };
 		963DEEBF2A90E5FF00F4A2D1 /* ReadUnitTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadUnitTest.swift; sourceTree = "<group>"; };
+		963DEEC12A90EE9100F4A2D1 /* bookapp.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = bookapp.xctestplan; sourceTree = "<group>"; };
 		96EA11A42A908B04000BCBEC /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
 		96EA11A52A908B04000BCBEC /* EditViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -113,6 +114,7 @@
 		963C406E2A8FD85400B5CB67 = {
 			isa = PBXGroup;
 			children = (
+				963DEEC12A90EE9100F4A2D1 /* bookapp.xctestplan */,
 				963C40792A8FD85400B5CB67 /* bookapp */,
 				963C40902A8FD85500B5CB67 /* bookappTests */,
 				963C409A2A8FD85500B5CB67 /* bookappUITests */,
