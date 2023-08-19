@@ -175,9 +175,9 @@
 		963C40AB2A8FDA8100B5CB67 /* Read */ = {
 			isa = PBXGroup;
 			children = (
+				963C40B92A8FE1F800B5CB67 /* Model */,
 				963DEEBA2A90D2F500F4A2D1 /* UnitTest */,
 				963C40C02A8FE9E800B5CB67 /* ViewModel */,
-				963C40B92A8FE1F800B5CB67 /* Model */,
 				963C40B82A8FE1EA00B5CB67 /* ViewController */,
 			);
 			path = Read;

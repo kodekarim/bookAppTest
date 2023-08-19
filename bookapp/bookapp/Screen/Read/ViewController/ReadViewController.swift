@@ -22,10 +22,11 @@ class ReadViewController: UIPageViewController {
             setViewControllers([firstPage], direction: .forward, animated: true, completion: nil)
         }
         setupPageControl()
+        handleViewState()
 
     }
     
-    func setupPageControl() {
+    fileprivate func setupPageControl() {
         pageControl.numberOfPages = viewModel.pages.count
         pageControl.backgroundStyle = .prominent
         pageControl.currentPage = 0
@@ -36,6 +37,19 @@ class ReadViewController: UIPageViewController {
             pageControl.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             pageControl.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -20)
         ])
+    }
+    
+    fileprivate func handleViewState() {
+        viewModel.stateDidChange = { [weak self ] state in
+            switch state {
+            case .loading:
+                debugPrint("Loading..")
+            case .success:
+                break
+            case .error:
+                debugPrint("Handle error")
+            }
+        }
     }
 
 }
