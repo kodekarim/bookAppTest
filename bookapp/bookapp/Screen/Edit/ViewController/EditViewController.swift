@@ -19,9 +19,18 @@ class EditViewController: UIViewController {
     
     weak var editDelegate:EditViewDelegate?
     
+    var oldFontSize:CGFloat?
+    var oldLineSpace:CGFloat?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         addTarget()
+        
+        let fontSize = UserSettings.fontSize
+        let lineWidth = UserSettings.lineSpace
+        
+        sFontSizeStepper.value = fontSize
+        sLineSpaceStepper.value = lineWidth
     }
     
     fileprivate func addTarget() {

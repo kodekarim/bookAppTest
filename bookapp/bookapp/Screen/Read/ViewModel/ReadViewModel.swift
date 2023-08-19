@@ -12,7 +12,6 @@ class ReadViewModel {
     
     var textModel:TextFileModel?
     var pages: [UIViewController] = []
-    var customFontSize:CGFloat = 14
 
     //ui state 
     enum ReadListState {

@@ -38,7 +38,7 @@
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minimumValue="1" maximumValue="3" stepValue="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="9Wj-wF-5H9">
+                        <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minimumValue="1" maximumValue="4" stepValue="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="9Wj-wF-5H9">
                             <rect key="frame" x="25.666666666666657" y="114.66666666666666" width="94" height="32"/>
                         </stepper>
                     </subviews>

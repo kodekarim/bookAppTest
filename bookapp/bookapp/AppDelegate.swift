@@ -14,6 +14,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        let fontSize = UserSettings.fontSize
+        if fontSize == 0 {
+            UserSettings.fontSize = 14
+        }
+        let lineWidth = UserSettings.lineSpace
+        if lineWidth == 0 {
+            UserSettings.lineSpace = 1
+        }
         return true
     }
 

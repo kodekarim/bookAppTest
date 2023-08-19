@@ -11,14 +11,23 @@ class SingleViewController: UIViewController {
 
     @IBOutlet weak var lContentLabel: UILabel!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
     }
-
     
-    func refreshUI(fontSize:CGFloat) {
+    override func viewWillAppear(_ animated: Bool) {
+        refreshUI()
+    }
+    
+    
+    func refreshUI() {
+        let fontSize = UserSettings.fontSize
         lContentLabel.font = UIFont(name: lContentLabel.font.fontName, size: fontSize)
+        
+        let lineSpace = UserSettings.lineSpace
+        lContentLabel.spacing = lineSpace
     }
     
 

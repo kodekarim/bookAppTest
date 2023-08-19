@@ -11,8 +11,6 @@ class ReadViewController: UIPageViewController {
     
     var pageControl = UIPageControl()
     var viewModel:ReadViewModel!
-    var currentVC:SingleViewController?
-    var fontz:UIFont?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,12 +19,10 @@ class ReadViewController: UIPageViewController {
         
         viewModel.setup()
         if let firstPage = viewModel.pages.first {
-            currentVC = firstPage as? SingleViewController
             setViewControllers([firstPage], direction: .forward, animated: true, completion: nil)
         }
         setupPageControl()
-        
-        fontz = viewModel.preferredFontWithCustomSize(for: .body, customSize: 14)
+
     }
     
     func setupPageControl() {
@@ -50,8 +46,7 @@ extension ReadViewController : UIPageViewControllerDataSource, UIPageViewControl
         guard let index = viewModel.pages.firstIndex(of: viewController), index > 0 else {
             return nil
         }
-        currentVC = viewController as? SingleViewController
-        currentVC?.refreshUI(fontSize: viewModel.customFontSize)
+
         return viewModel.pages[index - 1]
     }
     
@@ -59,9 +54,7 @@ extension ReadViewController : UIPageViewControllerDataSource, UIPageViewControl
         guard let index = viewModel.pages.firstIndex(of: viewController), index < viewModel.pages.count - 1 else {
             return nil
         }
-        
-        currentVC?.refreshUI(fontSize: viewModel.customFontSize)
-        currentVC = viewController as? SingleViewController
+
         return viewModel.pages[index + 1]
     }
     
@@ -75,29 +68,20 @@ extension ReadViewController : UIPageViewControllerDataSource, UIPageViewControl
 
 extension ReadViewController : EditViewDelegate {
     func handleFontSize(stepper: UIStepper) {
-        viewModel.customFontSize = stepper.value
-        if let vc = currentVC {
-            vc.refreshUI(fontSize: viewModel.customFontSize)
+        UserSettings.fontSize = stepper.value
+        let index = pageControl.currentPage
+        if let viewController = viewModel.pages[index] as? SingleViewController {
+            viewController.refreshUI()
         }
     }
     
     func hanleLineSpace(stepper: UIStepper) {
-        if let vc = currentVC  {
-            
-            let attributedString = NSMutableAttributedString(string: vc.lContentLabel.text ?? "")
-            let paragraphStyle = NSMutableParagraphStyle()
-            paragraphStyle.lineSpacing = stepper.value
-            
-            attributedString.addAttribute(
-                        .paragraphStyle,
-                        value: paragraphStyle,
-                        range: NSRange(location: 0, length: attributedString.length
-                    ))
-            
-            vc.lContentLabel.attributedText = attributedString
+        UserSettings.lineSpace = stepper.value
+        let index = pageControl.currentPage
+        if let viewController = viewModel.pages[index] as? SingleViewController {
+            viewController.refreshUI()
         }
     }
-    
     
 }
 

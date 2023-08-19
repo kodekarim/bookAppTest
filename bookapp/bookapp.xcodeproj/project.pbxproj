@@ -28,6 +28,8 @@
 		963DEEB32A90BC3500F4A2D1 /* SingleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963DEEB12A90BC3500F4A2D1 /* SingleViewController.swift */; };
 		963DEEB42A90BC3500F4A2D1 /* SingleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 963DEEB22A90BC3500F4A2D1 /* SingleViewController.xib */; };
 		963DEEB92A90CC9000F4A2D1 /* UploadUnitTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963DEEB82A90CC9000F4A2D1 /* UploadUnitTest.swift */; };
+		963DEEBC2A90DEA400F4A2D1 /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963DEEBB2A90DEA400F4A2D1 /* UserSettings.swift */; };
+		963DEEBE2A90E4C200F4A2D1 /* UILableExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963DEEBD2A90E4C200F4A2D1 /* UILableExtension.swift */; };
 		96EA11A62A908B04000BCBEC /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EA11A42A908B04000BCBEC /* EditViewController.swift */; };
 		96EA11A72A908B04000BCBEC /* EditViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96EA11A52A908B04000BCBEC /* EditViewController.xib */; };
 /* End PBXBuildFile section */
@@ -75,6 +77,8 @@
 		963DEEB12A90BC3500F4A2D1 /* SingleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleViewController.swift; sourceTree = "<group>"; };
 		963DEEB22A90BC3500F4A2D1 /* SingleViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SingleViewController.xib; sourceTree = "<group>"; };
 		963DEEB82A90CC9000F4A2D1 /* UploadUnitTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadUnitTest.swift; sourceTree = "<group>"; };
+		963DEEBB2A90DEA400F4A2D1 /* UserSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
+		963DEEBD2A90E4C200F4A2D1 /* UILableExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILableExtension.swift; sourceTree = "<group>"; };
 		96EA11A42A908B04000BCBEC /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
 		96EA11A52A908B04000BCBEC /* EditViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -169,6 +173,7 @@
 		963C40AB2A8FDA8100B5CB67 /* Read */ = {
 			isa = PBXGroup;
 			children = (
+				963DEEBA2A90D2F500F4A2D1 /* UnitTest */,
 				963C40C02A8FE9E800B5CB67 /* ViewModel */,
 				963C40B92A8FE1F800B5CB67 /* Model */,
 				963C40B82A8FE1EA00B5CB67 /* ViewController */,
@@ -193,6 +198,8 @@
 				963C40AE2A8FDAC400B5CB67 /* ViewFromNib.swift */,
 				963C40B02A8FDAD600B5CB67 /* Coordinator.swift */,
 				963DEEAE2A909C6500F4A2D1 /* Constant.swift */,
+				963DEEBB2A90DEA400F4A2D1 /* UserSettings.swift */,
+				963DEEBD2A90E4C200F4A2D1 /* UILableExtension.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -284,6 +291,13 @@
 			isa = PBXGroup;
 			children = (
 				963DEEB82A90CC9000F4A2D1 /* UploadUnitTest.swift */,
+			);
+			path = UnitTest;
+			sourceTree = "<group>";
+		};
+		963DEEBA2A90D2F500F4A2D1 /* UnitTest */ = {
+			isa = PBXGroup;
+			children = (
 			);
 			path = UnitTest;
 			sourceTree = "<group>";
@@ -431,8 +445,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				963DEEBC2A90DEA400F4A2D1 /* UserSettings.swift in Sources */,
 				96EA11A62A908B04000BCBEC /* EditViewController.swift in Sources */,
 				963C40AF2A8FDAC400B5CB67 /* ViewFromNib.swift in Sources */,
+				963DEEBE2A90E4C200F4A2D1 /* UILableExtension.swift in Sources */,
 				963C40C72A8FF46600B5CB67 /* UploadViewModel.swift in Sources */,
 				963DEEB32A90BC3500F4A2D1 /* SingleViewController.swift in Sources */,
 				963C40B62A8FDD8100B5CB67 /* UploadViewController.swift in Sources */,
